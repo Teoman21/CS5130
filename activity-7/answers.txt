@@ -1,0 +1,13 @@
+Question 1 - Mutation Problem: What happens to the original features array after calling this function?
+- The original features array is permananetly modified by -= and /= operators so we lose original data thus we need a copy of the data 
+
+Question 2 - Side Effects Problem: What global variables are modified? Why is this problematic?
+- last_mean and last_std are modified globally. This is problematic because:
+cannot normalize data independently, makes test difficult because of shared state so the test wont be independently
+
+Question 3 - Error Handling Problem: What's wrong with returning None for unusual data?
+- Returns ambiguous type (array or None) requiring callers to always check. Doesn't explain what went wrong or which features are problematic
+
+Question 4 - Testing Problem: Why would this function be difficult to unit test?
+- Global state causes tests to interfere with each other
+- Must test multiple behaviors simultaneously (stats, normalization, validation)
