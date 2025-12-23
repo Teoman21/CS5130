@@ -1,0 +1,13 @@
+# Requirements for CS 5130 Lab 6: Book Recommendation Engine
+# Install with: pip install -r requirements.txt
+
+# Core data processing
+pandas>=2.0.0
+numpy>=1.24.0
+
+# Machine learning utilities
+scikit-learn>=1.3.0
+
+# Optional but recommended
+jupyter>=1.0.0  # For interactive development
+matplotlib>=3.7.0  # For visualizations (if you want to extend the lab)

@@ -1,0 +1,11 @@
+Info to Submit 
+Metric	Your Result
+Memory usage before optimization	2.90 MB
+Memory usage after optimization	0.14 MB
+Memory reduction percentage	95.03 %
+Number of columns (before)	shape: (10000, 10)
+Number of columns (after)	shape:(10000, 6)
+
+Q1: Selective column loading had the biggest effect because dropping four unneeded columns immediately shrank the dataset from 10 to 6 fields, while the dtype tweaks only squeezed a bit more from the remaining columns; fewer columns simply means dramatically less data to store. Dtype optimization still mattered, but it’s more of a fine tuning step once you have already limited the column set.
+
+Q2: On a project with data 100× larger, loading only the required columns would keep notebooks responsive and prevent running out of RAM during exploration. The lighter dtypes would let me keep more intermediate DataFrames in memory, so I could iterate faster without constantly sampling or spilling to disk, making the whole workflow smoother.

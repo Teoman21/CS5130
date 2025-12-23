@@ -1,0 +1,23 @@
+# Core dependencies
+numpy>=1.21.0
+Pillow>=9.0.0
+
+# Image processing and computer vision
+scikit-image>=0.19.0
+scipy>=1.9.0
+
+# Machine learning
+scikit-learn>=1.1.0
+
+# Profiling
+line_profiler>=4.1.0
+
+# Web interface
+gradio>=4.0.0
+
+# Hugging Face datasets
+datasets>=2.0.0
+huggingface-hub>=0.16.0
+
+# Visualization and plotting
+matplotlib>=3.5.0
